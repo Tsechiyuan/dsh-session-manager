@@ -1,0 +1,22 @@
+{
+  "_note": "dsh-session-manager 会话设定模板（v2 格式，GLOBAL + WORKSPACE 两层）。可直接替换 $DSH_HOME/storages/session_manager_settings.json（替换前先停 dsh web，避免运行中的 Host 用内存状态覆盖），或把下面的值抄进页面「设定」标签的表单。注意：workspaces 的键必须是工作区 id——示例用 <workspaceId>，请换成实际 id。",
+  "version": 2,
+  "savedAt": 0,
+  "global": {
+    "enabled": true,
+    "name": "示例称呼",
+    "occupation": "示例职业",
+    "instructions": "示例长期指令。",
+    "updatedAt": 0
+  },
+  "workspaces": {
+    "<workspaceId>": {
+      "enabled": true,
+      "override": false,
+      "name": "示例称呼",
+      "occupation": "示例职业",
+      "instructions": "示例长期指令。",
+      "updatedAt": 0
+    }
+  }
+}

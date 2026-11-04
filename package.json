@@ -1,0 +1,71 @@
+{
+  "name": "dsh-session-manager",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "「会话管理」侧栏入口 + 侧栏「更多」菜单里的「会话设定」；全局/工作区两层设定（Host 注入系统提示）+ 官方侧栏的最近/隐藏过滤；单个包，四个功能开关在插件行配置里即时生效；已登录 DeepSeek 时会用登录用户名预填空的「会话称呼」",
+  "author": "Tsechiyuan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsechiyuan/dsh-session-manager.git"
+  },
+  "homepage": "https://github.com/Tsechiyuan/dsh-session-manager#readme",
+  "bugs": {
+    "url": "https://github.com/Tsechiyuan/dsh-session-manager/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "session-manager",
+    "workspace",
+    "settings"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "templates/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "icon": "./icon.svg",
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    },
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.2"
+    }
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
