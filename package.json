@@ -1,9 +1,9 @@
 {
   "name": "dsh-session-manager",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
-  "description": "「会话管理」侧栏入口 + 侧栏「更多」菜单里的「会话设定」；全局/工作区两层设定（Host 注入系统提示）+ 官方侧栏的最近/隐藏过滤；单个包，四个功能开关在插件行配置里即时生效；已登录 DeepSeek 时会用登录用户名预填空的「会话称呼」",
+  "description": "「会话管理」与「个性化」两个左侧栏入口；全局/工作区两层个性化设定（Host 注入系统提示）+ 官方侧栏的最近/隐藏过滤；单个包，四个功能开关在插件行配置里即时生效；已登录 DeepSeek 时会用登录用户名预填空的「会话称呼」",
   "author": "Tsechiyuan",
   "license": "MIT",
   "repository": {
@@ -62,7 +62,7 @@
       ]
     },
     "compatibility": {
-      "dsh": ">=0.2.0-rc.2"
+      "dsh": ">=0.2.2-rc.2"
     }
   },
   "engines": {

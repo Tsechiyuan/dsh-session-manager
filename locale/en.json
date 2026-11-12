@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Session Manager",
-    "description": "A Session Manager sidebar entry plus a Session Settings row in the sidebar More menu: browse sessions by workspace, rename, batch archive, read-only preview; configure global / workspace session settings (workspace can override global) injected into system prompts; merged sidebar filters (recent workspaces / manual hide); four feature switches in the plugin config row, applied immediately."
+    "description": "Two left-sidebar entries, Session Manager and Personalization: browse sessions by workspace, rename, batch archive, read-only preview; configure global / workspace personalization (workspace can override global) injected into system prompts; merged sidebar filters (recent workspaces / manual hide); four feature switches in the plugin config row, applied immediately."
   }
 }
